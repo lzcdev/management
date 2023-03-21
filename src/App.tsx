@@ -1,18 +1,14 @@
 import { useState } from 'react'
-import Comp1 from '@/components/Comp1/index'
-import Comp2 from '@/components/Comp2/index'
-
-// import reactLogo from './assets/react.svg'
-// import './App.css'
+import { Outlet, Link } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      顶级组件
-      <Comp1></Comp1>
-      <Comp2></Comp2>
+      <Link to='/home'>Home</Link>
+      <Link to='/about'>About</Link>
+      <Outlet></Outlet>
     </div>
   )
 }
